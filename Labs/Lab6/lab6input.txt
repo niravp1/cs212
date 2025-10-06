@@ -1,0 +1,16 @@
+123
+75
+43
+221
+325
+6
+117
+763
+83
+785
+21
+775
+425
+647
+move this file to Labs directory to use it 
+u must run the java command from a directory above
