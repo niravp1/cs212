@@ -7,7 +7,7 @@ public class Lab5Program1 {
 		
 		String[] wordArray = { "hello", "goodbye", "cat", "dog", "red", "green", "sun", "moon" };
 		String isOrIsNot, inputWord;
-		String fileName = "lab5input.txt";
+		String fileName = args[0];
 		String[] fileArray = new String[8];
 		inputFromFile(fileName, fileArray);
 		System.out.println(fileArray.length);

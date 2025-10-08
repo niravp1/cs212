@@ -12,5 +12,3 @@
 775
 425
 647
-move this file to Labs directory to use it 
-u must run the java command from a directory above

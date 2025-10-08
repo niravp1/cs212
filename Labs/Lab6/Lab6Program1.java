@@ -11,7 +11,7 @@ public class Lab6Program1 {
 		inputFromFile(fileName, fileArray);
 		JOptionPane.showMessageDialog(null,"Sum: " + sum(fileArray,fileArray.length) + "\n" + "Average: "+ 
 		average(fileArray, fileArray.length));
-	}
+	} 
 	/*
 	 * create function that reads file one word per line
 	 * stores it in a array

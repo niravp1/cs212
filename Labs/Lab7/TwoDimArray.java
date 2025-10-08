@@ -1,11 +1,11 @@
 package Lab7;
 
 public class TwoDimArray {
-	public static String myFile = "Lab7/twodimesion.txt";
-	public static int[][] myArray = fillArray(myFile);
 
 	public static void main(String[] args) {
 
+		String myFile = args[0];
+		int[][] myArray = fillArray(myFile);
 		System.out.println("========== NORMAL ARRAY ==========");
 		for (int i = 0; i < myArray.length; i++) {
 			for (int j = 0; j < myArray[i].length; j++) {
