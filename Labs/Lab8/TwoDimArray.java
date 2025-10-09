@@ -1,10 +1,12 @@
 package Lab8;
 
+import java.util.StringTokenizer;
+
 public class TwoDimArray {
 
 	public static void main(String[] args) {
 
-		String myFile = args[0];
+		String myFile = "Labs/Lab8/twodimension8.txt";
 		int[][] myArray = fillArray(myFile);
 		System.out.println("========== NORMAL ARRAY ==========");
 		for (int i = 0; i < myArray.length; i++) {
@@ -42,13 +44,21 @@ public class TwoDimArray {
 
 	public static int[][] fillArray(String myFile) {
 		TextFileInput myArrayInput = new TextFileInput(myFile);
-		int row = Integer.parseInt(myArrayInput.readLine());
-		int col = Integer.parseInt(myArrayInput.readLine());
+		// 4 6
+		StringTokenizer myTokens = new StringTokenizer(myArrayInput.readLine(),",");
+			
+		int row = Integer.parseInt(myTokens.nextToken());
+		int col = Integer.parseInt(myTokens.nextToken());
 		int myInputArray[][] = new int[row][col];
 		for (int i = 0; i < row; i++) {
+			// 1 2 3 4 5 6
+			String line = myArrayInput.readLine();
+			StringTokenizer TokenRow = new StringTokenizer(line,",");
 			for (int j = 0; j < col; j++) {
-				myInputArray[i][j] = Integer.parseInt(myArrayInput.readLine());
+				if (TokenRow.hasMoreTokens())
+					myInputArray[i][j] = Integer.parseInt(TokenRow.nextToken());
 			}
+
 		}
 		return myInputArray;
 

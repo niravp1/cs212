@@ -1,3 +1,4 @@
+package Lab8;
 import java.util.*;
 /*
  * This application demonstrates the use of a StringTokenizer.
@@ -18,7 +19,7 @@ public class Tokens {
    /*
     * Open the file and read a line   
     */
-      myFile = new TextFileInput("animals.txt");
+      myFile = new TextFileInput("Labs/Lab8/animals.txt");
       line = myFile.readLine();
       System.out.println("The input line is "+line);
    /*
