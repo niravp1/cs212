@@ -22,6 +22,10 @@ public class Money {
 
     public Money(int d, int c) {
         dollars = d;
+        while (c > 100){
+            dollars +=1;
+            c-=100;
+        }
         cents = c;
     }
 
@@ -51,17 +55,28 @@ public class Money {
         return true;
     }
 
+    public void add(Money other)
+    { // this + object , store the addition in the this object 
+        if (cents + other.cents > 100)
+        {
+            dollars+=1;
+            cents = cents + other.cents  - 100;
+        }
+        dollars = dollars + other.dollars;
+    }
     /*
      * dollars = 6 cents = 5 -> 1234
      * centsString = 5
      */
     public static void main(String args[]) {
-        Money m1 = new Money();
-        Money m2 = new Money(6, 5);
+        Money m1 = new Money(9,102);
+        Money m2 = new Money(5, 243);
         System.out.println(m1.getCents());
         System.out.println(m2.getDollars());
         System.out.println(m2);
         System.out.println(m1.compareTo(m2));
         System.out.println(m1.equals(m2));
+        m1.add(m2);
+        System.out.print(m1);
     }
 }
