@@ -1,3 +1,4 @@
+package Exam1B;
 public class Distance {
 /*
  * Part a:

@@ -1,3 +1,4 @@
+package Exam1B;
 public class Question4 {
    static String s1,s2,s3,s4;
    public static void main (String[] args){
