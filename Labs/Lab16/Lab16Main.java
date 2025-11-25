@@ -1,7 +1,5 @@
 package Lab16;
 
-import LinkedList;
-
 public class Lab16Main {
 
 	public static void main(String[] args) {
